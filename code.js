@@ -19,7 +19,7 @@ if (isMobile) {
 */
     
 document.getElementById("change_color").href="?r"+data;
-/*var colorPicker = new iro.ColorPicker('#picker1', {
+var colorPicker = new iro.ColorPicker('#picker1', {
     width: size,
     handleRadius: radius,
     borderWidth: 1,
@@ -71,7 +71,7 @@ var colorPicker = new iro.ColorPicker('#picker3', {
 colorPicker.on(['color:init', 'input:end'], function(color) {
     data[6] = "R3="+color.red+"G3="+color.green+"B3="+color.blue;
     document.getElementById("change_color").href="?r"+data;
-    });*/
+    });
 
 function brightness_1(){
     var value = document.getElementById("brightness_1").value;
