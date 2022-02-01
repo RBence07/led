@@ -1,4 +1,4 @@
-var data = ["R1=255G1=255B1=255","L1=255","K1=255","R2=255G2=255B2=255","L2=255","K2=255","R3=255G3=255B3=255","L3=255","K3=255","C1=5","L4=255","L5=255"];
+var data = ["R1=255G1=255B1=255","L1=255","K1=255","R2=255G2=255B2=255","L2=255","K2=255","R3=255G3=255B3=255","L3=255","K3=255","C1=4","L4=255","L5=255"];
 var size=300;
 var radius=8;
 if(window.innerWidth < 1000) {
@@ -18,7 +18,7 @@ if (isMobile) {
     element.innerHTML = "You are using Desktop";
 }
     
-window.location.href=data
+document.getElementById("change_color").href="index.html#"+data
 var colorPicker = new iro.ColorPicker('#picker1', {
     width: size,
     handleRadius: radius,
@@ -33,7 +33,7 @@ var colorPicker = new iro.ColorPicker('#picker1', {
 });
 colorPicker.on(['color:init', 'input:end'], function(color) {
     data[0] ="R1="+color.red+"G1="+color.green+"B1="+color.blue;
-    window.location.href=data
+    document.getElementById("change_color").href=data
 });
 
 
@@ -52,7 +52,7 @@ var colorPicker = new iro.ColorPicker('#picker2', {
 
 colorPicker.on(['color:init', 'input:end'], function(color) {
     data[3] = "R2="+color.red+"G2="+color.green+"B2="+color.blue;
-    window.location.href=data
+    document.getElementById("change_color").href=data
     });
 
 var colorPicker = new iro.ColorPicker('#picker3', {
@@ -70,59 +70,59 @@ var colorPicker = new iro.ColorPicker('#picker3', {
 
 colorPicker.on(['color:init', 'input:end'], function(color) {
     data[6] = "R3="+color.red+"G3="+color.green+"B3="+color.blue;
-    window.location.href=data
+    document.getElementById("change_color").href=data
     });
 
 function brightness_1(){
     var value = document.getElementById("brightness_1").value;
     data[1] = "L1="+value;
-    window.location.href=data
+    document.getElementById("change_color").href=data
 }
 
 function kelvin_1(){
     var value = document.getElementById("kelvin_1").value;
     data[2] = "K1="+value;
-    window.location.href=data
+    document.getElementById("change_color").href=data
 }
 
 function brightness_2(){
     var value = document.getElementById("brightness_2").value;
     data[4] = "L2="+value;;
-    window.location.href=data
+    document.getElementById("change_color").href=data
 }
 
 function kelvin_2(){
     var value = document.getElementById("kelvin_2").value;
     data[5] = "K2="+value;
-    window.location.href=data
+    document.getElementById("change_color").href=data
 }
 
 function brightness_3(){
     var value = document.getElementById("brightness_3").value;
     data[7] = "L3="+value;
-    window.location.href=data
+    document.getElementById("change_color").href=data
 }
 
 function kelvin_3(){
     var value = document.getElementById("kelvin_3").value;
     data[8] = "K3="+value;
-    window.location.href=data
+    document.getElementById("change_color").href=data
 }
 
 function curtain_1(){
     var value = document.getElementById("curtain_1").value;
     data[9] = "C1="+value;
-    window.location.href=data
+    document.getElementById("change_color").href=data
 }
 
 function brightness_4(){
     var value = document.getElementById("brightness_4").value;
     data[10] = "L4="+value;
-    window.location.href=data
+    document.getElementById("change_color").href=data
 }
 
 function brightness_5(){
     var value = document.getElementById("brightness_5").value;
     data[11] = "L5="+value;
-    window.location.href=data
+    document.getElementById("change_color").href=data
 }
