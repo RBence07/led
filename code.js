@@ -9,15 +9,7 @@ else{
         size=300;
         radius=8;
     }
-    
-var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-var element = document.getElementById('text');
-if (isMobile) {
-    element.innerHTML = "You are using Mobile";
-} else {
-    element.innerHTML = "You are using Desktop";
-}
-    
+
 window.location.href="?r"+data;
 var colorPicker = new iro.ColorPicker('#picker1', {
     width: size,
