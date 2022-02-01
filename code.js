@@ -10,7 +10,7 @@ else{
         radius=8;
     }
 
-window.location.href="?r"+data;
+document.getElementById("change_color").href="?r"+data;
 var colorPicker = new iro.ColorPicker('#picker1', {
     width: size,
     handleRadius: radius,
