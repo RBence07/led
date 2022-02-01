@@ -168,3 +168,5 @@ function brightness_5(){
     data[18] = value+"=L5";
     document.getElementById("change_color").href=data;
 }
+
+document.getElementById("loading").innerHTML= "";
