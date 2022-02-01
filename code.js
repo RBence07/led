@@ -1,16 +1,43 @@
-var data = ["R1=255G1=255B1=255","L1=255","K1=255","R2=255G2=255B2=255","L2=255","K2=255","R3=255G3=255B3=255","L3=255","K3=255","C1=4","L4=255","L5=255"];
 var size=300;
 var radius=8;
 if(window.innerWidth < 1000) {
         size=690;
         radius=18.4;
+        const collection = document.getElementsByClassName("desktop");
+        collection[0].innerHTML= "";
     }
 else{
         size=300;
         radius=8;
+        const collection = document.getElementsByClassName("mobile");
+        collection[0].innerHTML= "";
+        collection[1].innerHTML= "";
+        collection[2].innerHTML= "";
     }
 
-document.getElementById("change_color").href="?r"+data;
+var data = (window.location.href.toString()).split(',');
+console.log(data);
+if(data.length == 22){
+    console.log("alma")
+    document.getElementById("brightness_1").value=parseInt(data[4]);
+    document.getElementById("kelvin_1").value=parseInt(data[5]);
+
+    document.getElementById("brightness_2").value=parseInt(data[9]);
+    document.getElementById("kelvin_2").value=parseInt(data[10]);
+
+    document.getElementById("brightness_3").value=parseInt(data[14]);
+    document.getElementById("kelvin_3").value=parseInt(data[15]);
+
+    document.getElementById("curtain_1").value=parseInt(data[16]);
+    document.getElementById("brightness_4").value=parseInt(data[17]);
+    document.getElementById("brightness_5").value=parseInt(data[18]);
+    var colors = [data[19],data[20],data[21]]
+}
+else {
+    data = ["?r","255=R1","255=G1","255=B1","0=L1","0=K1","255=R2","255=G2","255=B2","0=L2","0=K2","255=R3","255=G3","255=B3","0=L3","0=K3","0=C1","0=L4","0=L5"];
+}
+
+document.getElementById("change_color").href=data;
 var colorPicker = new iro.ColorPicker('#picker1', {
     width: size,
     handleRadius: radius,
@@ -23,11 +50,32 @@ var colorPicker = new iro.ColorPicker('#picker1', {
     },
     ]
 });
+
+if(data.length == 22){
+    colorPicker.color.set(colors[0]);
+    };
+
 colorPicker.on(['color:init', 'input:end'], function(color) {
-    data[0] ="R1="+color.red+"G1="+color.green+"B1="+color.blue;
-    document.getElementById("change_color").href="?r"+data;
+    data[1] = color.red+"=R1"
+    data[2] = color.green+"=G1"
+    data[3] = color.blue+"=B1"
+    data[19] = color.hexString;
+    document.getElementById("change_color").href=data;
 });
 
+
+
+function brightness_1(){
+    var value = document.getElementById("brightness_1").value;
+    data[4] = value+"=L1";
+    document.getElementById("change_color").href=data;
+}
+
+function kelvin_1(){
+    var value = document.getElementById("kelvin_1").value;
+    data[5] = value+"=K1";
+    document.getElementById("change_color").href=data;
+}
 
 var colorPicker = new iro.ColorPicker('#picker2', {
     width: size,
@@ -42,10 +90,29 @@ var colorPicker = new iro.ColorPicker('#picker2', {
     ]
 });
 
+if(data.length == 22){
+    colorPicker.color.set(colors[1]);
+    };
+
 colorPicker.on(['color:init', 'input:end'], function(color) {
-    data[3] = "R2="+color.red+"G2="+color.green+"B2="+color.blue;
-    document.getElementById("change_color").href="?r"+data;
+    data[6] = color.red+"=R2"
+    data[7] = color.green+"=G2"
+    data[8] = color.blue+"=B2"
+    data[20] = color.hexString;
+    document.getElementById("change_color").href=data;
     });
+
+function brightness_2(){
+    var value = document.getElementById("brightness_2").value;
+    data[9] = value+"=L2";
+    document.getElementById("change_color").href=data;
+}
+    
+function kelvin_2(){
+    var value = document.getElementById("kelvin_2").value;
+    data[10] = value+"=K2";
+    document.getElementById("change_color").href=data;
+}
 
 var colorPicker = new iro.ColorPicker('#picker3', {
     width: size,
@@ -60,61 +127,44 @@ var colorPicker = new iro.ColorPicker('#picker3', {
     ]
 });
 
+if(data.length == 22){
+    colorPicker.color.set(colors[2]);
+    };
+
 colorPicker.on(['color:init', 'input:end'], function(color) {
-    data[6] = "R3="+color.red+"G3="+color.green+"B3="+color.blue;
-    document.getElementById("change_color").href="?r"+data;
+    data[11] = color.red+"=R3"
+    data[12] = color.green+"=G3"
+    data[13] = color.blue+"=B3"
+    data[21] = color.hexString;
+    document.getElementById("change_color").href=data;
     });
-
-function brightness_1(){
-    var value = document.getElementById("brightness_1").value;
-    data[1] = "L1="+value;
-    document.getElementById("change_color").href="?r"+data;
-}
-
-function kelvin_1(){
-    var value = document.getElementById("kelvin_1").value;
-    data[2] = "K1="+value;
-    document.getElementById("change_color").href="?r"+data;
-}
-
-function brightness_2(){
-    var value = document.getElementById("brightness_2").value;
-    data[4] = "L2="+value;;
-    document.getElementById("change_color").href="?r"+data;
-}
-
-function kelvin_2(){
-    var value = document.getElementById("kelvin_2").value;
-    data[5] = "K2="+value;
-    document.getElementById("change_color").href="?r"+data;
-}
 
 function brightness_3(){
     var value = document.getElementById("brightness_3").value;
-    data[7] = "L3="+value;
-    document.getElementById("change_color").href="?r"+data;
+    data[14] = value+"=L3";
+    document.getElementById("change_color").href=data;
 }
 
 function kelvin_3(){
     var value = document.getElementById("kelvin_3").value;
-    data[8] = "K3="+value;
-    document.getElementById("change_color").href="?r"+data;
+    data[15] = value+"=K3";
+    document.getElementById("change_color").href=data;
 }
 
 function curtain_1(){
     var value = document.getElementById("curtain_1").value;
-    data[9] = "C1="+value;
-    document.getElementById("change_color").href="?r"+data;
+    data[16] = value+"=C";
+    document.getElementById("change_color").href=data;
 }
 
 function brightness_4(){
     var value = document.getElementById("brightness_4").value;
-    data[10] = "L4="+value;
-    document.getElementById("change_color").href="?r"+data;
+    data[17] = value+"=L4";
+    document.getElementById("change_color").href=data;
 }
 
 function brightness_5(){
     var value = document.getElementById("brightness_5").value;
-    data[11] = "L5="+value;
-    document.getElementById("change_color").href="?r"+data;
+    data[18] = value+"=L5";
+    document.getElementById("change_color").href=data;
 }
