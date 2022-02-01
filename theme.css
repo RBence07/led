@@ -18,13 +18,26 @@ p {
     color: whitesmoke;
 }
 
+a:link, a:visited {
+    font-weight: bold;
+    text-decoration: none;
+    color: whitesmoke;
+    background-color: #696969;
+    border-radius: 10px;
+    padding: 10px 80px;
+    font-size: 16px;
+}
+.reset:link, .reset:visited {
+    padding: 10px 125px;
+}
+
 .wrapper-div {
     width: fit-content;
     overflow: hidden;
 }
 
 .elements {
-    height: 585px;
+    height: 645px;
     width: 380px;
     float: left;
 }
@@ -124,7 +137,7 @@ p {
     }
     
     .elements {
-        height: 1345.5px;
+        height: 1483.5px;
         width: 874px;
         float: left;
     }
@@ -184,5 +197,14 @@ p {
     
     #text {
         text-align: center;
+    }
+    a:link, a:visited {
+        font-weight: bold;
+        text-decoration: none;
+        color: whitesmoke;
+        background-color: #4d4d4d;
+        border-radius: 23px;
+        padding: 23px 184px;
+        font-size: 36.8px;
     }
 }
