@@ -56,10 +56,10 @@ if(data.length == 22){
     };
 
 colorPicker.on(['color:init', 'input:end'], function(color) {
-    data[1] = color.red;
-    data[2] = color.green;
-    data[3] = color.blue;
-    data[19] = color.hexString;
+    data[1] = color.red
+    data[2] = color.green
+    data[3] = color.blue
+    data[19] = color.hexString
     document.getElementById("change_color").href=data;
 });
 
@@ -98,7 +98,7 @@ colorPicker.on(['color:init', 'input:end'], function(color) {
     data[6] = color.red
     data[7] = color.green
     data[8] = color.blue
-    data[20] = color.hexString;
+    data[20] = color.hexString
     document.getElementById("change_color").href=data;
     });
 
@@ -132,10 +132,10 @@ if(data.length == 22){
     };
 
 colorPicker.on(['color:init', 'input:end'], function(color) {
-    data[11] = color.red;;
-    data[12] = color.green;
-    data[13] = color.blue;
-    data[21] = color.hexString;
+    data[11] = color.red
+    data[12] = color.green
+    data[13] = color.blue
+    data[21] = color.hexString
     document.getElementById("change_color").href=data;
     });
 
