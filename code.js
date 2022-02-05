@@ -34,7 +34,7 @@ if(data.length == 22){
     var colors = [data[19],data[20],data[21]]
 }
 else {
-    data = ["?r","255=R1","255=G1","255=B1","0=L1","0=K1","255=R2","255=G2","255=B2","0=L2","0=K2","255=R3","255=G3","255=B3","0=L3","0=K3","0=C1","0=L4","0=L5"];
+    data = ["A","255B","255C","255D","0E","0F","255G","255H","255I","0J","0K","255L","255M","255N","0O","0P","0Q","0R","0S"];
 }
 
 document.getElementById("change_color").href=data;
@@ -56,9 +56,9 @@ if(data.length == 22){
     };
 
 colorPicker.on(['color:init', 'input:end'], function(color) {
-    data[1] = color.red+"=R1"
-    data[2] = color.green+"=G1"
-    data[3] = color.blue+"=B1"
+    data[1] = color.red+"B"
+    data[2] = color.green+"C"
+    data[3] = color.blue+"D"
     data[19] = color.hexString;
     document.getElementById("change_color").href=data;
 });
@@ -67,13 +67,13 @@ colorPicker.on(['color:init', 'input:end'], function(color) {
 
 function brightness_1(){
     var value = document.getElementById("brightness_1").value;
-    data[4] = value+"=L1";
+    data[4] = value+"=E";
     document.getElementById("change_color").href=data;
 }
 
 function kelvin_1(){
     var value = document.getElementById("kelvin_1").value;
-    data[5] = value+"=K1";
+    data[5] = value+"=F";
     document.getElementById("change_color").href=data;
 }
 
@@ -95,22 +95,22 @@ if(data.length == 22){
     };
 
 colorPicker.on(['color:init', 'input:end'], function(color) {
-    data[6] = color.red+"=R2"
-    data[7] = color.green+"=G2"
-    data[8] = color.blue+"=B2"
+    data[6] = color.red+"G"
+    data[7] = color.green+"H"
+    data[8] = color.blue+"I"
     data[20] = color.hexString;
     document.getElementById("change_color").href=data;
     });
 
 function brightness_2(){
     var value = document.getElementById("brightness_2").value;
-    data[9] = value+"=L2";
+    data[9] = value+"J";
     document.getElementById("change_color").href=data;
 }
     
 function kelvin_2(){
     var value = document.getElementById("kelvin_2").value;
-    data[10] = value+"=K2";
+    data[10] = value+"K";
     document.getElementById("change_color").href=data;
 }
 
@@ -132,40 +132,40 @@ if(data.length == 22){
     };
 
 colorPicker.on(['color:init', 'input:end'], function(color) {
-    data[11] = color.red+"=R3"
-    data[12] = color.green+"=G3"
-    data[13] = color.blue+"=B3"
+    data[11] = color.red+"L"
+    data[12] = color.green+"M"
+    data[13] = color.blue+"N"
     data[21] = color.hexString;
     document.getElementById("change_color").href=data;
     });
 
 function brightness_3(){
     var value = document.getElementById("brightness_3").value;
-    data[14] = value+"=L3";
+    data[14] = value+"O";
     document.getElementById("change_color").href=data;
 }
 
 function kelvin_3(){
     var value = document.getElementById("kelvin_3").value;
-    data[15] = value+"=K3";
+    data[15] = value+"P";
     document.getElementById("change_color").href=data;
 }
 
 function curtain_1(){
     var value = document.getElementById("curtain_1").value;
-    data[16] = value+"=C";
+    data[16] = value+"Q";
     document.getElementById("change_color").href=data;
 }
 
 function brightness_4(){
     var value = document.getElementById("brightness_4").value;
-    data[17] = value+"=L4";
+    data[17] = value+"R";
     document.getElementById("change_color").href=data;
 }
 
 function brightness_5(){
     var value = document.getElementById("brightness_5").value;
-    data[18] = value+"=L5";
+    data[18] = value+"S";
     document.getElementById("change_color").href=data;
 }
 
