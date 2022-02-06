@@ -34,7 +34,7 @@ if(data.length == 22){
     var colors = [data[19],data[20],data[21]]
 }
 else {
-    data = ["A","255","255","255","0","0","255","255","255","0","0","255","255","255","0","0","0","0","0","Z"];
+    data = ["A","255","255","255","0","0","255","255","255","0","0","255","255","255","0","0","0","0","0,Z"];
 }
 
 document.getElementById("change_color").href=data;
@@ -165,7 +165,7 @@ function brightness_4(){
 
 function brightness_5(){
     var value = document.getElementById("brightness_5").value;
-    data[18] = value+"Z";
+    data[18] = value+",Z";
     document.getElementById("change_color").href=data;
 }
 
