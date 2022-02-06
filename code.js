@@ -165,7 +165,7 @@ function brightness_4(){
 
 function brightness_5(){
     var value = document.getElementById("brightness_5").value;
-    data[18] = value;
+    data[18] = value+"Z";
     document.getElementById("change_color").href=data;
 }
 
