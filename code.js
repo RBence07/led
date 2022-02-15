@@ -31,7 +31,7 @@ if(data.length == 23){
     document.getElementById("curtain_1").value=parseInt(data[16]);
     document.getElementById("brightness_4").value=parseInt(data[17]);
     document.getElementById("brightness_5").value=parseInt(data[18]);
-    var colors = [data[19],data[20],data[21]]
+    var colors = [data[20],data[21],data[22]]
 }
 else {
     data = ["A","255","255","255","0","0","255","255","255","0","0","255","255","255","0","0","0","0","0","Z","-","-","-"];
