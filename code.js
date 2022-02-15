@@ -51,7 +51,7 @@ var colorPicker = new iro.ColorPicker('#picker1', {
     ]
 });
 
-if(data.length == 22){
+if(data.length == 23){
     colorPicker.color.set(colors[0]);
     };
 
@@ -90,7 +90,7 @@ var colorPicker = new iro.ColorPicker('#picker2', {
     ]
 });
 
-if(data.length == 22){
+if(data.length == 23){
     colorPicker.color.set(colors[1]);
     };
 
@@ -127,7 +127,7 @@ var colorPicker = new iro.ColorPicker('#picker3', {
     ]
 });
 
-if(data.length == 22){
+if(data.length == 23){
     colorPicker.color.set(colors[2]);
     };
 
