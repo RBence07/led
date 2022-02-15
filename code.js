@@ -17,7 +17,7 @@ else{
 
 var data = (window.location.href.toString()).split(',');
 console.log(data);
-if(data.length == 22){
+if(data.length == 23){
     console.log("alma")
     document.getElementById("brightness_1").value=parseInt(data[4]);
     document.getElementById("kelvin_1").value=parseInt(data[5]);
@@ -34,7 +34,7 @@ if(data.length == 22){
     var colors = [data[19],data[20],data[21]]
 }
 else {
-    data = ["A","255","255","255","0","0","255","255","255","0","0","255","255","255","0","0","0","0","0,Z"];
+    data = ["A","255","255","255","0","0","255","255","255","0","0","255","255","255","0","0","0","0","0","Z"];
 }
 
 document.getElementById("change_color").href=data;
@@ -59,7 +59,7 @@ colorPicker.on(['color:init', 'input:end'], function(color) {
     data[1] = color.red
     data[2] = color.green
     data[3] = color.blue
-    data[19] = color.hexString
+    data[20] = color.hexString
     document.getElementById("change_color").href=data;
 });
 
@@ -98,7 +98,7 @@ colorPicker.on(['color:init', 'input:end'], function(color) {
     data[6] = color.red
     data[7] = color.green
     data[8] = color.blue
-    data[20] = color.hexString
+    data[21] = color.hexString
     document.getElementById("change_color").href=data;
     });
 
@@ -135,7 +135,7 @@ colorPicker.on(['color:init', 'input:end'], function(color) {
     data[11] = color.red
     data[12] = color.green
     data[13] = color.blue
-    data[21] = color.hexString
+    data[22] = color.hexString
     document.getElementById("change_color").href=data;
     });
 
@@ -165,7 +165,7 @@ function brightness_4(){
 
 function brightness_5(){
     var value = document.getElementById("brightness_5").value;
-    data[18] = value+",Z";
+    data[18] = value;
     document.getElementById("change_color").href=data;
 }
 
